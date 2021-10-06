@@ -18,7 +18,7 @@ module.exports = {
         'other-color': '#EEEEEE',
       },
       fontFamily: {
-        body: ['Oswald'],
+        body: ['Calibri'],
       },
     },
     container: {
