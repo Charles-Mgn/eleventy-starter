@@ -15,6 +15,10 @@ module.exports = {
       }),
       colors: {
         'my-color': '#433333',
+        'other-color': '#EEEEEE',
+      },
+      fontFamily: {
+        body: ['Oswald'],
       },
     },
     container: {
