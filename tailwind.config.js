@@ -13,6 +13,9 @@ module.exports = {
           },
         },
       }),
+      colors: {
+        'my-color': '#433333',
+      },
     },
     container: {
       center: true,
