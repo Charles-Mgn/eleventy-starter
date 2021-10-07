@@ -8,26 +8,32 @@ title: Galerie
     <button @click="open = !open"
             class="bg-green-500 text-white rounded-md px-8 py-2 text-base font-medium hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-300"
             id="open-btn">
-        Affiche/Cache dialogue
+        Click me
     </button>
 
-    <dialog :open="open" class="relative top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white">
-        Contenu dialogue
+    <dialog :open="open" class="absolute top-20 mx-auto p-5 border w-96 shadow-lg rounded-md bg-white" @click="open = !open">
+        Cliquez sur les images afin de découvrir les chateaux de la Loire.
     </dialog>
 </div>
 
 <div x-data="{imageUrl:null}">
-    <ul>
-        <li><img src="/static/images/thumbnails/animals-1.jpeg" alt="un animal"
-                 @click="imageUrl = '/static/images/animals-1.jpeg';"></li>
-        <li><img src="/static/images/thumbnails/animals-2.jpeg" alt="un animal"
-                 @click="imageUrl = '/static/images/animals-2.jpeg';"></li>
-        <li><img src="/static/images/thumbnails/animals-3.jpeg" alt="un animal"
-                 @click="imageUrl = '/static/images/animals-3.jpeg';"></li>
-        <li><img src="/static/images/thumbnails/animals-4.jpeg" alt="un animal"
-                 @click="imageUrl = '/static/images/animals-4.jpeg';"></li>
-        <li><img src="/static/images/thumbnails/animals-5.jpeg" alt="un animal"
-                 @click="imageUrl = '/static/images/animals-5.jpeg';"></li>
+    <ul class="flex">
+        <li><img src="/static/images/thumbnails/amboise.jpg" alt="un chateau"
+                 @click="imageUrl = '/static/images/amboise.jpg';"></li>
+        <li><img src="/static/images/thumbnails/azay-le-rideau.jpg" alt="un chateau"
+                 @click="imageUrl = '/static/images/azay-le-rideau.jpg';"></li>
+        <li><img src="/static/images/thumbnails/blois.jpg" alt="un chateau"
+                 @click="imageUrl = '/static/images/blois.jpg';"></li>
+        <li><img src="/static/images/thumbnails/chambord.jpg" alt="un chateau"
+                 @click="imageUrl = '/static/images/chambord.jpg';"></li>
+        <li><img src="/static/images/thumbnails/cheverny.jpg" alt="un chateau"
+                 @click="imageUrl = '/static/images/cheverny.jpg';"></li>
+        <li><img src="/static/images/thumbnails/usse.jpg" alt="un chateau"
+                 @click="imageUrl = '/static/images/usse.jpg';"></li>
+        <li><img src="/static/images/thumbnails/valencay.jpg" alt="un chateau"
+                 @click="imageUrl = '/static/images/valencay.jpg';"></li>
+        <li><img src="/static/images/thumbnails/villandry.jpg" alt="un chateau"
+                 @click="imageUrl = '/static/images/villandry.jpg';"></li>
     </ul>
 
     <div x-show="!!imageUrl" @click.away="imageUrl=null">

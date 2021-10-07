@@ -14,11 +14,11 @@ module.exports = {
         },
       }),
       colors: {
-        'my-color': '#433333',
-        'other-color': '#EEEEEE',
+        'my-color': '#333',
+        'other-color': '#EEE',
       },
       fontFamily: {
-        body: ['Calibri'],
+        body: ['system-ui'],
       },
     },
     container: {

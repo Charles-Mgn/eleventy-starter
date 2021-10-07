@@ -1,20 +1,71 @@
 <!DOCTYPE html>
-<html lang="en-us" class="antialiased font-normal text-gray-700 bg-white">
+<html lang="en-us" class="bg-my-color sm:bg-other-color antialiased font-normal text-gray-700 bg-white">
     <head>
         {% include "head.njk" %}
         <link rel="stylesheet" href="/assets/site.css">
         <script src="/assets/site.js" defer></script>
     </head>
-    <body class="bg-my-color sm:bg-other-color text-other-color sm:text-my-color font-body">
-        <header role="banner" class="p-6">
-            <div class="container">
-                <a href="/" rel="home">{{ site.title }}</a>
-            </div>
-            <nav>
-                <ul>
-                    <li><a href="/">home</a></li>
-                    <li><a href="/galerie">galerie</a></li>
-                </ul>
+    <body class="text-other-color sm:text-my-color font-body">
+        <header role="banner" class="bg-[#333]">
+            <nav class="bg-white shadow-lg">
+                <div class="max-w-6xl mx-auto px-4">
+                    <div class="flex justify-between">
+                        <div class="flex space-x-7">
+                            <div>
+                                <!-- Website Logo -->
+                                <a href="#" class="flex items-center py-4 px-2">
+                                    <img src="/static/images/logo.png" alt="Logo" class="h-8 w-8 mr-2">
+                                    <span class="font-semibold text-gray-500 text-lg">CDLA</span>
+                                </a>
+                            </div>
+                            <!-- Primary Navbar items -->
+                            <div class="hidden md:flex items-center space-x-1">
+                                <a href="/index.html" class="py-4 px-2 text-green-500 border-b-4 border-green-500 font-semibold ">Accueil</a>
+                                <a href="/galerie" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Galerie</a>
+                                <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">About</a>
+                                <a href="" class="py-4 px-2 text-gray-500 font-semibold hover:text-green-500 transition duration-300">Contact Us</a>
+                            </div>
+                        </div>
+                        <!-- Secondary Navbar items -->
+                        <div class="hidden md:flex items-center space-x-3 ">
+                            <a href="" class="py-2 px-2 font-medium text-gray-500 rounded hover:bg-green-500 hover:text-white transition duration-300">Log In</a>
+                            <a href="" class="py-2 px-2 font-medium text-white bg-green-500 rounded hover:bg-green-400 transition duration-300">Sign Up</a>
+                        </div>
+                        <!-- Mobile menu button -->
+                        <div class="md:hidden flex items-center">
+                            <button class="outline-none mobile-menu-button">
+                                <svg class=" w-6 h-6 text-gray-500 hover:text-green-500 "
+                                     x-show="!showMenu"
+                                     fill="none"
+                                     stroke-linecap="round"
+                                     stroke-linejoin="round"
+                                     stroke-width="2"
+                                     viewBox="0 0 24 24"
+                                     stroke="currentColor"
+                                >
+                                    <path d="M4 6h16M4 12h16M4 18h16"></path>
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <!-- mobile menu -->
+                <div class="hidden mobile-menu">
+                    <ul class="">
+                        <li class="active"><a href="index" class="block text-sm px-2 py-4 text-white bg-green-500 font-semibold">Accueil</a></li>
+                        <li><a href="galerie" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Galerie</a></li>
+                        <li><a href="#about" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">A propos</a></li>
+                        <li><a href="#contact" class="block text-sm px-2 py-4 hover:bg-green-500 transition duration-300">Nous contacter</a></li>
+                    </ul>
+                </div>
+                <script>
+                    const btn = document.querySelector("button.mobile-menu-button");
+                    const menu = document.querySelector(".mobile-menu");
+
+                    btn.addEventListener("click", () => {
+                        menu.classList.toggle("hidden");
+                    });
+                </script>
             </nav>
         </header>
         <main>

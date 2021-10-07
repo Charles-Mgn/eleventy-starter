@@ -4,9 +4,15 @@ title: Welcome
 ---
 
 {%- from "macros.njk" import component -%}
-<h1>Bonjour monde</h1>
-<div class="p-6">
-    <div class="container">
-        {{ component("headings/title", { content: "Title Component" }) }}
+
+<div class="p-6 h-screen">
+    <div class="container p-4">
+        {{ component("headings/title", { content: "Les chateaux de la Loire" }) }}
     </div>
+
+    <p class="p-4">L'expression châteaux de la Loire regroupe sous une même appellation touristique un ensemble de châteaux français situés dans le Val de Loire.</p>
+    <p class="p-4">Les châteaux de la Loire ont la particularité architecturale d'avoir été, pour la plupart, rebâtis ou fortement remaniés aux xve siècle et xvie siècle à une époque où la cour des rois de France était installée dans cette région ou dans ses environs immédiats.</p>
+
+    <img class="md: "
+         src="/static/images/patrimoine-carte.jpg" alt="carte">
 </div>
